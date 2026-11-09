@@ -4,12 +4,14 @@ const path = require('path');
 
 const documentos = [
   {
-    nombre: 'qr-documento-1',
-    url: 'https://laguairapoke.vercel.app/documentos/documento-1.pdf',
+    nombre: 'qr-menu',
+    url: 'https://laguairapoke.vercel.app/menu',
+    label: 'Menú',
   },
   {
-    nombre: 'qr-documento-2',
-    url: 'https://laguairapoke.vercel.app/documentos/documento-2.pdf',
+    nombre: 'qr-carta',
+    url: 'https://laguairapoke.vercel.app/carta',
+    label: 'Carta',
   },
 ];
 
@@ -30,7 +32,9 @@ const opciones = {
     const rutaSVG = path.join(outDir, `${doc.nombre}.svg`);
     await QRCode.toFile(rutaPNG, doc.url, opciones);
     await QRCode.toFile(rutaSVG, doc.url, { ...opciones, type: 'svg' });
-    console.log(`✅ ${doc.nombre} → ${doc.url}`);
+    console.log(`✅ QR ${doc.label} → ${doc.url}`);
   }
-  console.log('\n🎉 QR generados en qr-output/');
+  console.log('\n🎉 QRs nuevos generados en qr-output/');
+  console.log('   📁 qr-menu.png  → página Menú');
+  console.log('   📁 qr-carta.png → página Carta');
 })();

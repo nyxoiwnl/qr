@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Documentos",
-  description: "Acceso a documentos PDF",
+  title: "La Guaira Poke",
+  description: "La Guaira Poke 🌊🍣",
 };
 
 export default function RootLayout({
