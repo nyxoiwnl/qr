@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "La Guaira Poke",
-  description: "La Guaira Poke 🌊🍣",
+  title: "Ekop Sushi",
+  description: "Ekop Vegan Sushi 🍱",
 };
 
 export default function RootLayout({
